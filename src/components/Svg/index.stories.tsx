@@ -26,7 +26,7 @@ export const Default: React.FC = () => {
   );
 };
 
-const context = require.context("./Icons", true, /.tsx$/);
+const context = require.context(".", true, /.tsx$/);
 const components = context.keys().reduce((accum, path) => {
   const file = path.substring(2).replace(".tsx", "");
   return {
